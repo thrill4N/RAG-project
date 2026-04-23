@@ -1,0 +1,21 @@
+{
+  "name": "functions",
+  "description": "RAG Document QA Cloud Functions",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^4.5.0",
+    "@google-cloud/storage": "^7.7.0",
+    "@pinecone-database/pinecone": "^1.1.0",
+    "openai": "^4.20.0",
+    "pdf-parse": "^1.1.1"
+  }
+}

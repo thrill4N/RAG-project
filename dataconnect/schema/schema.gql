@@ -1,0 +1,41 @@
+type User @table {
+  googleId: String!
+  email: String!
+  displayName: String
+  photoUrl: String
+  createdAt: Timestamp
+}
+
+type Document @table {
+  user: User!
+  title: String!
+  fileRef: String!
+  uploadDate: Timestamp!
+  status: String!
+  fileType: String
+  pageCount: Int
+}
+
+type DocumentChunk @table {
+  document: Document!
+  chunkText: String!
+  chunkIndex: Int!
+  pineconeId: String!
+  pageNumber: Int
+}
+
+type Conversation @table {
+  user: User!
+  createdAt: Timestamp!
+  title: String!
+  lastActivity: Timestamp
+}
+
+type Message @table {
+  conversation: Conversation!
+  sender: String!
+  text: String!
+  createdAt: Timestamp!
+  referencedChunkIds: [UUID]
+  document: Document
+}

@@ -1,0 +1,19 @@
+rag-document-system/
+├── .firebaserc
+├── firebase.json
+├── .gitignore
+├── README.md
+├── firestore.indexes.json
+├── firestore.rules
+├── storage.rules
+│
+├── functions/
+│   ├── index.js
+│   ├── package.json
+│   ├── requirements.txt
+│   └── .env.example
+│
+└── public/
+    ├── index.html
+    ├── app.js
+    └── style.css
